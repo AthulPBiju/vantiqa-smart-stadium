@@ -46,7 +46,10 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 px-4 py-6 space-y-2">
+      <nav
+        aria-label="Main Navigation"
+        className="flex-1 px-4 py-6 space-y-2"
+      >
         {menuItems.map((item) => {
           const Icon = item.icon;
 
@@ -54,6 +57,7 @@ export default function Sidebar() {
             <NavLink
               key={item.name}
               to={item.path}
+              aria-label={item.name}
               className={({ isActive }) =>
                 `flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200 ${
                   isActive

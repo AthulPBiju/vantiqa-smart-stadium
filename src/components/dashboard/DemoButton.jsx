@@ -10,6 +10,8 @@ export default function DemoButton() {
     <button
       onClick={startDemo}
       disabled={demoRunning}
+      aria-label="Start Demo"
+      title="Start Demo"
       className={`
         fixed
         bottom-8
@@ -31,7 +33,6 @@ export default function DemoButton() {
         }
       `}
     >
-
       <Play size={20} />
 
       {demoRunning

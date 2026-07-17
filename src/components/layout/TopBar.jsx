@@ -45,6 +45,7 @@ export default function TopBar() {
           <SatelliteDish
             size={28}
             className="text-cyan-400"
+            aria-hidden="true"
           />
 
         </div>
@@ -134,9 +135,7 @@ export default function TopBar() {
           />
 
           {demoRunning
-
             ? "SIMULATION"
-
             : "LIVE"}
 
         </div>
@@ -145,7 +144,10 @@ export default function TopBar() {
 
         <div className="flex items-center gap-2 text-green-300">
 
-          <ShieldCheck size={20} />
+          <ShieldCheck
+            size={20}
+            aria-hidden="true"
+          />
 
           <span className="text-sm">
 
@@ -155,12 +157,17 @@ export default function TopBar() {
 
         </div>
 
-        {/* Notification */}
+        {/* Notifications */}
 
-        <Bell
-          size={22}
+        <button
+          aria-label="Notifications"
+          title="Notifications"
           className="cursor-pointer transition hover:rotate-12 hover:text-cyan-400"
-        />
+        >
+
+          <Bell size={22} />
+
+        </button>
 
         {/* User */}
 
@@ -169,6 +176,7 @@ export default function TopBar() {
           <CircleUserRound
             size={36}
             className="text-cyan-400"
+            aria-hidden="true"
           />
 
           <div>

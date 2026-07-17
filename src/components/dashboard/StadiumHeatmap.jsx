@@ -113,8 +113,8 @@ export default function StadiumHeatmap({
           <Radar
             size={20}
             className="animate-pulse"
+            aria-hidden="true"
           />
-
           <span className="text-sm font-semibold">
             LIVE
           </span>
@@ -146,6 +146,8 @@ export default function StadiumHeatmap({
           <button
             key={zone.name}
             onClick={() => setSelected?.(zone)}
+            aria-label={`${zone.name} - Crowd Density ${zone.crowd}%`}
+            title={`${zone.name} (${zone.crowd}%)`}
             className="absolute -translate-x-1/2 -translate-y-1/2"
             style={{
               top: zone.top,
@@ -164,6 +166,7 @@ export default function StadiumHeatmap({
               {/* Glow */}
 
               <div
+                aria-hidden="true"
                 className={`absolute h-10 w-10 rounded-full blur-lg opacity-70 animate-pulse ${
                   zone.color === "red"
                     ? "bg-red-500"
@@ -176,6 +179,7 @@ export default function StadiumHeatmap({
               {/* Dot */}
 
               <div
+                aria-hidden="true"
                 className={`relative h-5 w-5 rounded-full border-2 border-white ${
                   zone.color === "red"
                     ? "bg-red-500"
@@ -220,6 +224,7 @@ export default function StadiumHeatmap({
             <Activity
               size={18}
               className="animate-pulse"
+              aria-hidden="true"
             />
 
             LIVE
