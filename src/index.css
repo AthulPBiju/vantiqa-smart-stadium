@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #070B14;
+    color: white;
+    font-family:
+        Inter,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Better text rendering */
+
+*{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* Selection */
+
+::selection{
+    background:#06b6d4;
+    color:white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0b1220;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1e3a5f;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#06b6d4;
+}
+
+/* Smooth transitions */
+
+button,
+a{
+    transition:all .25s ease;
+}
